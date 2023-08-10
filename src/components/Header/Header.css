@@ -1,0 +1,121 @@
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  padding: 5px;
+  width: auto;
+ }
+
+ .logo {
+  width: 50px;
+  height: 50px;
+  margin-right: auto;
+  color: blue;
+  font-size: 2rem;
+ }
+
+.navbar{
+  display: flex;
+  align-items: center;
+ }
+
+ .navbar li {
+  margin: 0 15px;
+ }
+
+ .navbar li a {
+   color: #999;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 14px;
+   transition: 0.5s;
+ }
+
+ .navbar li a:hover{
+  color: red;
+ }
+
+ .navbar li.active a{
+  color: cyan;
+  font-weight: bold;
+}
+
+@media (max-width:768px) {
+  header .navbar {
+    display: none;
+  }
+.menu_toggle{
+  z-index: 10;
+  height: 55px;
+  width: 50px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu_toggle::before{
+  position: absolute;
+  content: "";
+  transform: translateY(-10px);
+  width: 20px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 6px 10px #fff;
+}
+
+.menu_toggle.open::before{
+  box-shadow: 0 0 #fff;
+  transform: rotate(135deg);
+}
+.menu_toggle::after{
+  position: absolute;
+  content: "";
+  transform: translateY(10px);
+  width: 20px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.menu_toggle.open::after{
+  transform: rotate(-135deg);
+}
+
+header .navbar.responsive{
+  display: flex;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9;
+}
+header .navbar.responsive li {
+  margin: 10px 0;
+}
+.navbar li a:active {
+  color: red;
+  font-weight: bold;
+}
+
+.navbar li a {
+  color: #999;
+
+}
+header .navbar.responsive li::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+}
+
+.logo{
+  margin-left: 5px;
+ }
+
+}
