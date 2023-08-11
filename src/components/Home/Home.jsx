@@ -90,7 +90,7 @@ function Home() {
           Contactez Moi
           </button>
           <button className="hollow-btn" onClick={handleCVClick}>
-          <a href="../../assets/images/CV.fecherolles.jerome.pdf" target="_blank" id="cvButton" rel="noopener noreferrer">
+          <a href="/assets/images/CV.fecherolles.jerome.pdf" target="_blank" id="cvButton" rel="noopener noreferrer">
           Mon Cv
           </a>
           </button>
