@@ -1,17 +1,22 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import copy from 'rollup-plugin-copy';
 
 export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
     sourcemap: true,
+    assetsDir: 'assets',
     rollupOptions: {
-      input: {
-        main: './src/main.jsx', // Chemin relatif vers votre fichier HTML principal
-      },
+      plugins: [
+        copy({
+          targets: [
+            { src: 'src/assets/*', dest: 'dist/assets' },
+          ],
+        }),
+      ],
     },
-    assetsDir: 'assets', // Chemin relatif vers le dossier assets
   },
-  base: '/newportfolio/',
+  base: '/newportfolio/', // Assurez-vous que c'est le bon chemin
 });
