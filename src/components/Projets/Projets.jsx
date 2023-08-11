@@ -51,7 +51,7 @@ function Projets() {
           <div>
             <label>Cats</label>
             <a href="https://jfecherolles.github.io/cat" target="_blank">
-              <img src="../../assets/images/projet1.ico" alt="cat" />
+              <img src="/assets/images/projet1.ico" alt="cat" />
             </a>
           </div>
         </div>
@@ -59,7 +59,7 @@ function Projets() {
           <div>
             <label>Weather</label>
             <a href="https://jfecherolles.github.io/weather-app" target="_blank">
-              <img src="../../assets/images/Projet2.ico" alt="weather-app" />
+              <img src="/assets/images/Projet2.ico" alt="weather-app" />
             </a>
           </div>
         </div>
@@ -67,7 +67,7 @@ function Projets() {
           <div>
             <label>Converter</label>
             <a href="https://jfecherolles.github.io/converter" target="_blank">
-              <img src="../../assets/images/Projet3.ico" alt="converter" />
+              <img src="/assets/images/Projet3.ico" alt="converter" />
             </a>
           </div>
         </div>
