@@ -4,13 +4,13 @@ const supabase = createClient('https://ingazqnwzecqgtknrpig.supabase.co', 'eyJhb
 
 export async function getPortfolioData() {
   try {
-    console.log("Tentative de récupération des données du portfolio...");
+    // console.log("Tentative de récupération des données du portfolio...");
     const { data, error } = await supabase
       .from('newportfolio')
       .select('cv')
       .eq('id', 1);
 
-    console.log("Données du portfolio pour la mise à jour du CV:", data);
+    // console.log("Données du portfolio pour la mise à jour du CV:", data);
 
     if (error) {
       console.log("Erreur lors de la récupération des données du portfolio:", error);
@@ -42,7 +42,7 @@ export async function updatePortfolioViews() {
     if (updateError) {
       console.log("Erreur lors de la mise à jour du compteur de vues:", updateError);
     } else {
-      console.log('Le compteur de vues a été mis à jour avec succès !');
+      // console.log('Le compteur de vues a été mis à jour avec succès !');
     }
   } else {
     console.log("Erreur lors de la récupération des données du portfolio:", error);
@@ -55,7 +55,7 @@ export async function updateCVClicks() {
     .select('cv')
     .eq('id', 1);
 
-  console.log("Données du portfolio pour la mise à jour du CV:", data);
+  // console.log("Données du portfolio pour la mise à jour du CV:", data);
 
   if (!error && data.length > 0) {
     const newCount = data[0].cv + 1;
@@ -67,7 +67,7 @@ export async function updateCVClicks() {
     if (updateError) {
       console.log("Erreur lors de la mise à jour du compteur de CV:", updateError);
     } else {
-      console.log('Le compteur de cv a été mis à jour avec succès !');
+      // console.log('Le compteur de cv a été mis à jour avec succès !');
     }
   } else {
     console.log("Erreur lors de la récupération des données du portfolio:", error);

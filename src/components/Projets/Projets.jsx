@@ -1,4 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+import projet1 from '../../assets/projet1.ico';
+import projet2 from '../../assets/Projet2.ico'; 
+import projet3 from '../../assets/Projet3.ico'; 
 import "./Projets.css";
 import TopButton from "../TopButton/TopButton";
 
@@ -19,7 +22,7 @@ function Projets() {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5,
+      threshold: 0.2,
     };
 
     const observer = new IntersectionObserver(handleIntersect, options);
@@ -51,7 +54,7 @@ function Projets() {
           <div>
             <label>Cats</label>
             <a href="https://jfecherolles.github.io/cat" target="_blank">
-              <img src="/assets/projet1.ico" alt="cat" />
+              <img src={projet1} alt="cat" />
             </a>
           </div>
         </div>
@@ -59,7 +62,7 @@ function Projets() {
           <div>
             <label>Weather</label>
             <a href="https://jfecherolles.github.io/weather-app" target="_blank">
-              <img src="/assets/Projet2.ico" alt="weather-app" />
+              <img src={projet2} alt="weather-app" />
             </a>
           </div>
         </div>
@@ -67,7 +70,7 @@ function Projets() {
           <div>
             <label>Converter</label>
             <a href="https://jfecherolles.github.io/converter" target="_blank">
-              <img src="/assets/Projet3.ico" alt="converter" />
+              <img src={projet3} alt="converter" />
             </a>
           </div>
         </div>

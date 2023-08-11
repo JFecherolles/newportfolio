@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Typed from 'typed.js';
 import "./Home.css";
+import maphoto from '../../assets/maphoto.png'; 
+import CV from '../../assets/CV.fecherolles.jerome.pdf';
 import { updateCVClicks, updatePortfolioViews, getPortfolioData } from "../../../api";
 
 function Home() {
@@ -90,7 +92,7 @@ function Home() {
           Contactez Moi
           </button>
           <button className="hollow-btn" onClick={handleCVClick}>
-          <a href="/assets/CV.fecherolles.jerome.pdf" target="_blank" id="cvButton" rel="noopener noreferrer">
+          <a href={CV} target="_blank" id="cvButton" rel="noopener noreferrer">
           Mon Cv
           </a>
           </button>
@@ -98,7 +100,7 @@ function Home() {
       </div>
       <div className={`ma-photo ${isVisible ? "appear" : "disappear"}`}>
         <div id="ma-photo-cercle"></div>
-        <img src="/assets/maphoto.png" id="ma-photo-reel" alt="Ma photo" />
+        <img src={maphoto} id="ma-photo-reel" alt="Ma photo" />
         <div className="contact-icon-holder">
           <a href="https://www.linkedin.com/in/jerome-fecherolles/" target="_blank" className="contact-icons">
             <i className="fab fa-linkedin"></i>
