@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   root: './',
@@ -11,7 +10,7 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: true,
-    assetsInclude: ['**/*.png', '**/*.ico'],
+    assetsInclude: ['**/*.png', '**/*.ico', 'assets/images/**/*'],
   },
   base: './',
 })
